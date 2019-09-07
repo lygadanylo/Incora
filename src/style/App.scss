@@ -1,0 +1,130 @@
+@import "~react-md/src/scss/react-md";
+@include react-md-everything;
+$md-primary-color: $md-teal-500;
+$md-secondary-color: $md-lime-a-400;
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.true-blur {
+    filter: blur(3px);
+}
+
+#posts,
+#comments {
+    padding-top: 15px;
+
+    .page-back {
+        position: absolute;
+        left: 0;
+        top: 40%;
+    }
+
+    header {
+
+        display: flex;
+        justify-content: space-between;
+        max-width: calc(100% - 240px);
+        margin: 0 auto;
+
+        h1 {
+            color: #000;
+        }
+
+        .create-button,
+        .back-button {
+            border: 1px solid black;
+            border-radius: 30px;
+
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+
+            &:hover {
+                background-color: greenyellow;
+            }
+        }
+    }
+
+    .posts-wrapper,
+    .comments-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .post,
+        .comment {
+            margin-right: 15px;
+            margin-top: 15px;
+            max-width: 400px;
+            height: 300px;
+        }
+    }
+}
+
+#popup {
+    .form-wrapper {
+        position: absolute;
+        top: 35%;
+        left: 35%;
+        min-width: 400px;
+        min-height: 300px;
+        z-index: 15;
+
+        .control-button {
+            float: right;
+        }
+
+        .fileds {
+            margin-top: 40px;
+            padding: 15px;
+
+            .input-field {
+                margin-top: 20px;
+                width: 100%;
+            }
+        }
+
+        .action-button {
+            float: right;
+            margin-top: 20px;
+            margin-right: 20px;
+            border: 1px solid black;
+            border-radius: 30px;
+
+            &:hover {
+                background-color: greenyellow;
+            }
+        }
+    }
+}
+
+.control-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    button {
+        border: 1px solid #000;
+        border-radius: 30px;
+        margin: 0 15px 0 15px;
+    }
+}
+
+.notification {
+    padding-top: 25px;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index: 5;
+
+    p {
+        font-size: 24px;
+        color: green;
+        font-weight: bold;
+    }
+}
